@@ -47,7 +47,7 @@ export default function App() {
 
   const handleConfirm = () => {
     // Função para lidar com a confirmação no modal
-    setDateTime(moment().format("DD-MM-YYYY HH:mm:ss")); // Obtém a data/hora atual apenas ao confirmar
+    setDateTime(moment().format("DD-MM-YYYY HH:mm")); // Obtém a data/hora atual apenas ao confirmar
     // Aqui você pode enviar os dados do ponto para o servidor ou armazená-los localmente junto com a data/hora
     setModalVisible(false); // Fecha o modal de confirmação
     Alert.alert("Ponto registrado com sucesso!"); // Exibe um alerta confirmando o registro do ponto
