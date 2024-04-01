@@ -65,7 +65,7 @@ export default function App() {
   return (
     // Renderização do componente principal
     <View style={styles.container}>
-      {errorMsg && <Text>{errorMsg}</Text>}{" "}
+      {errorMsg && <Text>{errorMsg}</Text>}
       {/* Exibe uma mensagem de erro, se houver */}
       {location && (
         // Se a localização estiver disponível, exibe o mapa com a localização atual do usuário
@@ -87,8 +87,9 @@ export default function App() {
           />
         </MapView>
       )}
-      <Text>{dateTime}</Text> {/* Exibe a data/hora atual */}
-      <Button title="Registrar Ponto" onPress={handleSave} />{" "}
+      {/* Exibe a data/hora atual */}
+      <Text>{dateTime}</Text>
+      <Button title="Registrar Ponto" onPress={handleSave} />
       {/* Botão para registrar o ponto */}
       <Modal isVisible={isModalVisible}>
         {/* Modal de confirmação */}
@@ -96,12 +97,9 @@ export default function App() {
           <Text style={styles.modalText}>
             Deseja confirmar o registro do ponto?
           </Text>
-          <Button title="Confirmar" onPress={handleConfirm} />{" "}
+          <Button title="Confirmar" onPress={handleConfirm} />
           {/* Botão para confirmar o registro */}
-          <Button
-            title="Cancelar"
-            onPress={() => setModalVisible(false)}
-          />{" "}
+          <Button title="Cancelar" onPress={() => setModalVisible(false)} />
           {/* Botão para cancelar */}
         </View>
       </Modal>
