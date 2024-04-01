@@ -89,7 +89,7 @@ export default function App() {
       )}
       {/* Exibe a data/hora atual */}
       <Text>{dateTime}</Text>
-      <Button title="Registrar Ponto" onPress={handleSave} />
+      <Button color={"#F2A341"} title="Registrar Ponto" onPress={handleSave} />
       {/* Botão para registrar o ponto */}
       <Modal isVisible={isModalVisible}>
         {/* Modal de confirmação */}
@@ -97,9 +97,17 @@ export default function App() {
           <Text style={styles.modalText}>
             Deseja confirmar o registro do ponto?
           </Text>
-          <Button title="Confirmar" onPress={handleConfirm} />
+          <Button
+            style={styles.botaoEspaco}
+            title="Confirmar"
+            onPress={handleConfirm}
+          />
           {/* Botão para confirmar o registro */}
-          <Button title="Cancelar" onPress={() => setModalVisible(false)} />
+          <Button
+            color={"#F24452"}
+            title="Cancelar"
+            onPress={() => setModalVisible(false)}
+          />
           {/* Botão para cancelar */}
         </View>
       </Modal>
@@ -111,7 +119,7 @@ const styles = StyleSheet.create({
   // Estilos do componente
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#A0E3F2",
     alignItems: "center",
     justifyContent: "center",
   },
@@ -119,14 +127,18 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "70%",
   },
+  botaoEspaco: {
+    paddingBottom: 10,
+  },
   modal: {
-    backgroundColor: "#fff",
+    backgroundColor: "#F29199",
     padding: 20,
     borderRadius: 10,
     alignItems: "center",
     justifyContent: "center",
   },
   modalText: {
+    color: "white",
     marginBottom: 20,
     fontSize: 18,
   },
