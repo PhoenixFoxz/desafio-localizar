@@ -1,8 +1,8 @@
 {
   "expo": {
     "name": "Localizar",
-    "slug": "Localizar",
-    "version": "1.0.0",
+    "slug": "localizar",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/logo.png",
     "userInterfaceStyle": "light",
@@ -19,10 +19,25 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-localizar.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.phoenixfoxx.localizar"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "84bef1ab-a74f-4e2f-9f71-32b50f92660c"
+      }
+    },
+    "owner": "phoenixfoxx",
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
+        }
+      ]
+    ]
   }
 }
