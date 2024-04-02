@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View, Image, Pressable } from "react-native";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logoPonto.png";
 import React, { useState } from "react";
 
 export default function Home({ navigation }) {
